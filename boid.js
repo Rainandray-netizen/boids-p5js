@@ -84,7 +84,7 @@ class Boid {
         other.position.y)
       if(d < perceptionRadius && other != this){
         let diff = p5.Vector.sub(this.position, other.position)
-        diff.div(d)
+        diff.div(d*d)
         steering.add(diff)
         total++
       }
